@@ -154,19 +154,266 @@ h1 span { color:#dc885e; }
 @keyframes turn { from { transform:none; } to { transform:none; } }
 @media (max-width:760px) { .hero{grid-template-columns:1fr;padding-top:24px;padding-bottom:18px;gap:8px}.hero-copy{display:none}.product-stage{order:1;min-height:260px}.brick-wrap{height:250px;transform:none}.brick{width:min(100%,430px)}.stage-caption{bottom:2px}.spec-layout{grid-template-columns:1fr}.spec-grid{grid-template-columns:1fr 1fr}.section{padding-top:18px;padding-bottom:42px}.section-head{align-items:center;flex-direction:column}.header-tag{font-size:10px}.site-header{padding:16px 18px}.editor-grid{grid-template-columns:1fr 1fr}.editor-panel{padding:18px;margin-bottom:28px}.footer{grid-template-columns:1fr;text-align:center;gap:14px;padding-top:22px}.footer-brand{justify-content:center}.footer-contact,.footer-social{align-items:center;text-align:center}.footer-contact a{justify-content:center!important}.footer-phones{justify-content:center}.social-links{justify-content:center}.footer-bottom{grid-column:1} }
 @media (prefers-reduced-motion:reduce) { .brick{animation:none;}html{scroll-behavior:auto;} }
+/* Blue and red visual theme */
+:root { --site-primary:#1769aa; --site-secondary:#101e35; --site-background:#0b1220; --site-on-secondary:#f4f7ff; --site-on-background:#f5f7fc; }
+.site-header { background:linear-gradient(110deg,#101e35,#162c4b); }
+.brand-mark { background:linear-gradient(145deg,#287bc1,#c92b42);border-color:#8bbdf0; }
+.brand-mark img { width:100%;height:100%;display:block;object-fit:contain;border-radius:inherit; }
+.header-tag { color:#dce9ff;border-color:#ffffff35; }
+.hero { background:radial-gradient(ellipse at 50% 45%,#1769aa30 0,transparent 44%),linear-gradient(135deg,#121f35,#0b1220 72%); }
+.eyebrow { color:#f07b8c; }
+.eyebrow:before { background:#e12d48; }
+h1 span { color:#f05a70; }
+.btn-primary { background:linear-gradient(110deg,#1769aa,#d7263d);box-shadow:0 10px 28px #1769aa40; }
+.stage-glow { background:#1769aa28; }
+.panel h3 i { background:#1769aa20;color:#e24b61; }
+.field input:focus { border-color:#1769aa;box-shadow:0 0 0 3px #1769aa22; }
+.result { background:linear-gradient(120deg,#1769aa,#c8203b); }
+.price-box { border-color:#d7263d66;background:linear-gradient(110deg,#1769aa12,#d7263d0b); }
+.price { color:#ed536a; }
+.footer { background:radial-gradient(ellipse at 50% 0%,#1769aa30,transparent 48%),linear-gradient(120deg,#0c1525,#17263d 55%,#0b1220);border-top-color:#d7263d99; }
+.footer:after { border-color:#1769aa24; }
+.footer-brand-mark { background:linear-gradient(135deg,#1769aa,#d7263d); }
+.footer-contact a,.footer-phones a { border-color:#1769aa88; }
+.contact-icon { background:#1769aa30;color:#f05a70; }
+.social-link:hover { border-color:#e12d48;background:#1769aa20; }
+.footer-phones a:hover { background:#1769aa30;border-color:#e12d48; }
+.footer-location:hover { border-color:#e12d48;background:#1769aa20; }
+.footer-location svg { color:#f05a70; }
+.catalog-ribbon { border-color:#1769aa66;background:linear-gradient(110deg,#1769aa20,#d7263d0b); }
+.catalog-ribbon strong,.spec-badge { color:#f05a70; }
+.spec-badge { background:#1769aa25; }
+.reveal-ready .spec-item:hover { border-color:#1769aa77;box-shadow:0 10px 22px #1769aa20; }
+.brand-mark svg { display:none; }
+.footer-logo-art { object-fit:contain;border-radius:12px; }
+.brand-mark.logo-fallback:after { content:""; }
+.footer-brand.logo-fallback:before { content:""; }
+/* Refined corporate presentation: confident blue, restrained red, clearer hierarchy */
+:root { --site-primary:#1769aa; --site-secondary:#102743; --site-background:#f3f6fa; --site-on-secondary:#ffffff; --site-on-background:#17263a; }
+body { background:#f3f6fa;color:#17263a; }
+.app-root { background:#f3f6fa;color:#17263a; }
+.site-header { padding:20px clamp(18px,5vw,72px);background:linear-gradient(110deg,#102743,#174c7c);box-shadow:0 5px 22px #10274318;border-bottom:3px solid #d7263d; }
+.brand { font-size:18px; }
+.brand-mark { width:58px;height:58px;border-radius:0;background:transparent;border:0;box-shadow:none; }
+.brand-mark img { object-fit:contain;background:transparent;border:0;box-shadow:none; }
+.header-tag { font-size:13px;color:#fff;border-color:#ffffff50;background:#ffffff0b; }
+.hero { min-height:290px;padding:28px clamp(18px,7vw,100px) 34px;background:linear-gradient(115deg,#e9f1f9,#f8fafc 55%,#f9e9ec);border-bottom:1px solid #d8e2ed; }
+.hero:before { opacity:.25;background-image:radial-gradient(#1769aa20 1px,transparent 1px); }
+.product-stage { min-height:310px; }
+.stage-glow { background:#1769aa12;filter:blur(24px); }
+.brick { border:1px solid #d6e0ea;background:#fff;box-shadow:0 18px 38px #193b5b20;padding:10px;border-radius:14px; }
+.section { padding-top:42px;padding-bottom:58px; }
+.section-head h2 { color:#102743; }
+.section-head p { color:#617186; }
+.spec-layout { gap:22px; }
+.panel { background:#fff;border:1px solid #dce5ee;border-radius:16px;box-shadow:0 8px 24px #193b5b0d; }
+.panel h3 { color:#173b60; }
+.panel h3 i { background:#e8f1fa;color:#c92740; }
+.spec-item { background:#f5f8fb;border:1px solid #e3eaf1;color:#17263a; }
+.spec-label { color:#68788b; }
+.spec-value { color:#173b60; }
+.price-box { background:#f7faff;border:1px solid #d9e6f2;border-right:4px solid #d7263d; }
+.price-box small,.empty-price { color:#617186; }
+.price { color:#c9233d; }
+.calc-intro,.field label,.disclaimer { color:#617186; }
+.field input { background:#fff;color:#17263a;border-color:#d7e1eb; }
+.field input:focus { border-color:#1769aa;box-shadow:0 0 0 3px #1769aa18; }
+.btn-primary { background:linear-gradient(110deg,#1769aa,#174c7c);box-shadow:0 6px 16px #1769aa25;border-radius:9px; }
+.result { background:linear-gradient(110deg,#123c66,#1769aa);border-radius:12px; }
+.footer { background:linear-gradient(110deg,#10243d,#173b60);border-top:4px solid #d7263d;color:#dce7f3; }
+.footer-brand { color:#fff; }
+.footer-logo-art { width:62px;height:62px;background:#fff;padding:3px;border-radius:10px; }
+.footer-thanks { color:#fff; }
+.footer-contact-title,.footer-social-title { color:#fff; }
+.contact-link,.footer-phones a,.footer-location,.social-link { border-color:#ffffff25;background:#ffffff0b;color:#fff; }
+.contact-icon,.footer-phones .phone-icon,.footer-location svg { color:#ff7183; }
+.social-link:hover,.footer-phones a:hover,.footer-location:hover { border-color:#e34a60;background:#ffffff12; }
+.footer-bottom { color:#aebfd1;border-top-color:#ffffff20; }
+.catalog-ribbon { border-color:#d4e2ef;background:#edf4fa; }
+.catalog-ribbon strong,.spec-badge { color:#c9233d; }
+.spec-badge { background:#f9e9ec; }
+.reveal-ready .spec-item:hover { border-color:#1769aa66;box-shadow:0 8px 18px #1769aa12; }
+@media (max-width:760px) { .site-header { padding:14px 16px; }.brand-mark { width:48px;height:48px; }.header-tag { white-space:normal;text-align:center;max-width:145px;line-height:1.7; }.hero { min-height:230px;padding-top:18px;padding-bottom:18px; }.product-stage { min-height:245px; }.section { padding-top:26px; }.panel { box-shadow:0 5px 18px #193b5b0b; }.footer { padding-top:24px; } }
+/* Softer showroom palette with stronger, intentional red accents */
+:root { --site-background:#e9edf2; }
+body,.app-root { background:#e9edf2;color:#1b2b40; }
+.hero { background:linear-gradient(115deg,#dce6f0 0%,#e9edf2 48%,#f0dfe2 100%);border-bottom:1px solid #d5a1a8; }
+.hero:before { opacity:.16;background-image:radial-gradient(#c51f3a20 1px,transparent 1px); }
+.stage-glow { background:#d7263d20; }
+.brick { background:#e1e7ee;border:1px solid #c7d2df;box-shadow:0 18px 38px #193b5b24; }
+.section { background:linear-gradient(180deg,#e9edf2,#e4e9ef); }
+.section-head h2 { color:#102743; }
+.section-head p { color:#52657b; }
+.panel { background:#f0f3f6;border:1px solid #cfd9e4;border-top:3px solid #c9233d;box-shadow:0 8px 24px #193b5b12; }
+.panel h3 { color:#102743; }
+.panel h3 i { background:#f8dfe3;color:#c9233d; }
+.spec-item { background:#e5ebf1;border:1px solid #cbd6e1;border-radius:11px; }
+.spec-label { color:#53667b; }
+.spec-value { color:#173b60; }
+.price-box { background:linear-gradient(110deg,#e0eaf4,#f6e0e4);border:1px solid #d7263d80;border-right:5px solid #c9233d; }
+.price-box small,.empty-price { color:#52657b; }
+.price { color:#bd1834; }
+.calc-intro,.field label,.disclaimer { color:#52657b; }
+.field input { background:#f7f8fa;color:#17263a;border-color:#c7d2df; }
+.field input:focus { border-color:#c9233d;box-shadow:0 0 0 3px #c9233d18; }
+.btn-primary { background:linear-gradient(110deg,#1769aa 0%,#c9233d 78%);box-shadow:0 7px 18px #c9233d30;border-radius:9px; }
+.result { background:linear-gradient(110deg,#174c7c 0%,#b91f39 100%);border:1px solid #d94b60;border-radius:12px; }
+.footer { background:linear-gradient(110deg,#10243d 0%,#173b60 58%,#7f1d32 100%);border-top:5px solid #d7263d;color:#e5edf6; }
+.footer:after { border-color:#e23c55;opacity:.2; }
+.contact-icon,.footer-phones .phone-icon,.footer-location svg { color:#ff7183; }
+.footer-contact a,.footer-phones a { border-color:#e34a6070; }
+.footer-phones a:hover,.footer-location:hover,.social-link:hover { border-color:#ff7183;background:#d7263d20; }
+.catalog-ribbon { border-color:#d7263d55;background:linear-gradient(110deg,#d7263d16,#1769aa0c); }
+.catalog-ribbon strong,.spec-badge { color:#b91f39; }
+.spec-badge { background:#f7dfe3; }
+.reveal-ready .spec-item:hover { border-color:#c9233d88;box-shadow:0 8px 18px #c9233d16; }
+@media (max-width:760px) { .hero { background:linear-gradient(135deg,#dce6f0,#f0dfe2); }.section { background:#e9edf2; }.panel { box-shadow:0 5px 18px #193b5b10; } }
+/* Warmer, more polished background for the technical information panel */
+#specs .panel:first-child { background:linear-gradient(145deg,#ffffff 0%,#f8f4f2 58%,#f4e9eb 100%); border-color:#d8cbd0; border-top-color:#c9233d; box-shadow:0 12px 30px #193b5b12, inset 0 1px 0 #ffffff; }
+#specs .panel:first-child .spec-item { background:linear-gradient(145deg,#f8fafc,#eaf0f6); border-color:#d4dfe9; }
+#specs .panel:first-child .price-box { background:linear-gradient(110deg,#eaf2fa 0%,#f9e8eb 100%); }
+@media (max-width:760px) { #specs .panel:first-child { background:linear-gradient(145deg,#fff 0%,#f5eef0 100%); } }
+/* Matching calculator panel colors */
+#calculator { background:linear-gradient(145deg,#ffffff 0%,#f5f7fa 58%,#f7e9ec 100%); border-color:#d8cbd0; border-top-color:#c9233d; box-shadow:0 12px 30px #193b5b12,inset 0 1px 0 #ffffff; }
+#calculator .calc-intro { color:#52657b; }
+#calculator .field label { color:#465d76; }
+#calculator .field input { background:linear-gradient(145deg,#fff,#edf3f8); border-color:#ccd8e5; }
+#calculator .field input:focus { border-color:#c9233d; box-shadow:0 0 0 3px #c9233d18; }
+#calculator .result { background:linear-gradient(110deg,#174c7c 0%,#1769aa 55%,#b91f39 100%); border-color:#d94b60; }
+#calculator .disclaimer { color:#52657b; }
+@media (max-width:760px) { #calculator { background:linear-gradient(145deg,#fff 0%,#f1f5f9 65%,#f7e9ec 100%); } }
+/* Make the calculator action button crisp and consistent with the catalog */
+#calculator #calculateButton { background:linear-gradient(110deg,#174c7c 0%,#1769aa 62%,#c9233d 100%); color:#fff; border:1px solid #ffffff70; border-radius:11px; padding:13px 25px; box-shadow:0 7px 18px #174c7c30,0 3px 9px #c9233d20; }
+#calculator #calculateButton:hover { background:linear-gradient(110deg,#123c66 0%,#155c98 62%,#ad1c34 100%); box-shadow:0 10px 22px #174c7c35; }
+#calculator #calculateButton:focus-visible { outline:3px solid #c9233d55; outline-offset:3px; }
+/* Distinctive midnight-blue showroom background */
+:root { --site-background:#111b2b; --site-on-background:#f3f6fb; }
+body { background:#111b2b; color:#f3f6fb; }
+.app-root { background:linear-gradient(180deg,#111b2b 0%,#17263a 48%,#111a29 100%); color:#f3f6fb; }
+.hero { background:radial-gradient(ellipse at 50% 28%,#1769aa42 0%,transparent 48%),radial-gradient(ellipse at 85% 80%,#c9233d18 0%,transparent 38%),linear-gradient(125deg,#172940 0%,#111b2b 58%,#201d2b 100%); border-bottom:1px solid #35516f; }
+.hero:before { opacity:.3; background-image:radial-gradient(#dce9ff22 1px,transparent 1px); }
+.stage-glow { background:radial-gradient(circle,#1769aa38 0%,#c9233d18 48%,transparent 72%); }
+.section { background:linear-gradient(180deg,#17263a 0%,#111b2b 100%); }
+.section-head h2 { color:#f3f6fb; }
+.section-head p { color:#a9bad0; }
+#specs .panel:first-child { background:linear-gradient(145deg,#23364c 0%,#1b2b40 62%,#302833 100%); border-color:#40556c; border-top-color:#e04459; box-shadow:0 16px 38px #050b1480,inset 0 1px 0 #ffffff0b; }
+#specs .panel:first-child .spec-item { background:linear-gradient(145deg,#2b4057,#223247); border-color:#40566d; }
+#specs .panel:first-child .panel h3, #specs .panel:first-child .spec-value { color:#f3f6fb; }
+#specs .panel:first-child .spec-label { color:#b4c3d5; }
+#specs .panel:first-child .price-box { background:linear-gradient(110deg,#1d3a56 0%,#382a3a 100%); border-color:#d34a60; }
+#calculator { background:linear-gradient(145deg,#23364c 0%,#1b2b40 58%,#302833 100%); border-color:#40556c; border-top-color:#e04459; box-shadow:0 16px 38px #050b1480,inset 0 1px 0 #ffffff0b; color:#f3f6fb; }
+#calculator .panel h3, #calculator h3 { color:#f3f6fb; }
+#calculator .calc-intro, #calculator .field label, #calculator .disclaimer { color:#b4c3d5; }
+#calculator .field input { background:linear-gradient(145deg,#17263a,#111b2b); color:#f3f6fb; border-color:#40566d; }
+#calculator .field input::placeholder { color:#9aabc0; }
+.catalog-ribbon { background:linear-gradient(110deg,#1b3550,#2b2434); border-color:#40566d; color:#e8eef7; }
+@media (max-width:760px) { .section { background:linear-gradient(180deg,#17263a,#111b2b); }.hero { background:radial-gradient(ellipse at 50% 25%,#1769aa38,transparent 55%),linear-gradient(135deg,#172940,#111b2b 72%,#201d2b); } }
+/* High-impact electric blue + vivid red showroom accents */
+:root { --site-primary:#168bff; }
+.app-root { background:radial-gradient(ellipse at 8% 16%,#087bff25 0%,transparent 32%),radial-gradient(ellipse at 92% 28%,#ff174425 0%,transparent 30%),linear-gradient(145deg,#0b1425 0%,#142844 48%,#241626 100%); }
+.site-header { background:linear-gradient(105deg,#071a33 0%,#124f91 48%,#8e1630 100%);border-bottom:2px solid transparent;border-image:linear-gradient(90deg,#168bff,#ff244b,#168bff) 1;box-shadow:0 8px 30px #02081490; }
+.brand-mark { box-shadow:0 0 0 3px #168bff24,0 0 26px #168bff45,0 0 36px #ff244b25; }
+.header-tag { background:linear-gradient(100deg,#168bff20,#ff244b24);border-color:#7dafff80;box-shadow:inset 0 0 18px #168bff0b; }
+.hero { background:radial-gradient(ellipse at 18% 35%,#168bff35 0%,transparent 36%),radial-gradient(ellipse at 84% 72%,#ff17443b 0%,transparent 38%),linear-gradient(120deg,#0b1c34 0%,#111b2b 48%,#281624 100%);border-bottom:1px solid #ff244b75; }
+.hero:before { opacity:.45;background-image:radial-gradient(#b9dcff30 1px,transparent 1px); }
+.stage-glow { background:radial-gradient(circle,#168bff58 0%,#ff174438 44%,transparent 72%);filter:blur(42px); }
+.brick { border-color:#168bff85;box-shadow:0 0 0 1px #ff244b30,0 18px 45px #020814a0,0 0 35px #168bff22; }
+.section { background:radial-gradient(ellipse at 0% 30%,#168bff15 0%,transparent 35%),radial-gradient(ellipse at 100% 75%,#ff174418 0%,transparent 34%),linear-gradient(180deg,#14243a 0%,#0e192a 100%); }
+.section-head h2 { text-shadow:0 0 24px #168bff24; }
+#specs .panel:first-child,#calculator { background:linear-gradient(135deg,#1b304b 0%,#14243a 48%,#321c30 100%);border:1px solid #4774a0;border-top:3px solid #ff244b;box-shadow:0 16px 40px #02081480,0 0 28px #168bff13,inset 0 1px 0 #ffffff12; }
+#specs .panel:first-child .spec-item { background:linear-gradient(135deg,#203d5d 0%,#192c45 62%,#3a2036 100%);border:1px solid #3c6590;box-shadow:inset 0 1px 0 #ffffff0b; }
+#specs .panel:first-child .spec-item:nth-child(odd) { border-right:2px solid #168bff; }
+#specs .panel:first-child .spec-item:nth-child(even) { border-right:2px solid #ff244b; }
+#specs .panel:first-child h3,#calculator h3 { color:#f4f8ff;text-shadow:0 0 18px #168bff24; }
+#specs .panel:first-child h3 i,#calculator h3 i { background:linear-gradient(135deg,#168bff38,#ff244b38);color:#ff6b83;border:1px solid #739bdc55; }
+#specs .panel:first-child .spec-value { color:#f4f8ff; }
+#specs .panel:first-child .spec-label,#calculator .calc-intro,#calculator .field label,#calculator .disclaimer { color:#b6cce4; }
+#specs .panel:first-child .price-box { background:linear-gradient(105deg,#123e68 0%,#1b2c48 52%,#651b35 100%);border:1px solid #ff244b;border-right:5px solid #168bff;box-shadow:0 0 24px #ff244b16,inset 0 0 22px #168bff0c; }
+#specs .panel:first-child .price { color:#ff5a75;text-shadow:0 0 18px #ff244b45; }
+#calculator .field input { background:linear-gradient(135deg,#0e1d31,#162940);color:#f4f8ff;border:1px solid #466b91; }
+#calculator .field input:focus { border-color:#168bff;box-shadow:0 0 0 3px #168bff30,0 0 18px #168bff20; }
+#calculator #calculateButton { background:linear-gradient(105deg,#087bdf 0%,#1769ff 42%,#d91d46 100%);border:1px solid #a8d4ff80;box-shadow:0 8px 24px #168bff40,0 5px 22px #ff174428; }
+#calculator #calculateButton:hover { background:linear-gradient(105deg,#168bff 0%,#245fff 42%,#ff244b 100%);box-shadow:0 10px 28px #168bff50,0 7px 26px #ff174440; }
+#calculator .result { background:linear-gradient(110deg,#0757a5 0%,#167eff 42%,#b91537 100%);border:1px solid #ff8297;box-shadow:0 8px 25px #168bff28,0 0 25px #ff17441c; }
+.catalog-ribbon { background:linear-gradient(105deg,#12385d 0%,#172941 48%,#4a1c32 100%);border-color:#4774a0;box-shadow:0 8px 24px #02081440; }
+.catalog-ribbon strong,.spec-badge { color:#ff6b83; }
+.spec-badge { background:linear-gradient(100deg,#168bff30,#ff244b30);border:1px solid #547bb4; }
+.footer { background:radial-gradient(ellipse at 12% 0%,#168bff38 0%,transparent 38%),radial-gradient(ellipse at 90% 100%,#ff174435 0%,transparent 42%),linear-gradient(115deg,#07172b 0%,#12385d 48%,#68192f 100%);border-top:4px solid transparent;border-image:linear-gradient(90deg,#168bff,#ff244b,#168bff) 1; }
+.footer:after { border-color:#168bff;box-shadow:0 0 35px #ff244b45; }
+.contact-link,.footer-phones a,.footer-location,.social-link { border-color:#5484b5;background:linear-gradient(105deg,#168bff15,#ff244b12); }
+.contact-icon,.footer-phones .phone-icon,.footer-location svg { color:#ff617b; }
+.footer-contact a:hover,.footer-phones a:hover,.footer-location:hover,.social-link:hover { border-color:#ff4568;background:linear-gradient(105deg,#168bff30,#ff244b35);box-shadow:0 0 18px #168bff24; }
+.footer-bottom { border-top-color:#5b7fa6; }
+@media (max-width:760px) { .app-root { background:linear-gradient(150deg,#0b1425,#142844 55%,#241626); }.hero { background:radial-gradient(ellipse at 15% 30%,#168bff35,transparent 40%),radial-gradient(ellipse at 90% 75%,#ff17442b,transparent 40%),linear-gradient(130deg,#0b1c34,#111b2b 55%,#281624); }.section { background:linear-gradient(160deg,#14243a,#0e192a 65%,#241626); } }
+/* Refined corporate balance: light neutral content, blue/red used as accents */
+.app-root { background:linear-gradient(180deg,#f3f5f8 0%,#e7ebf0 42%,#f5f6f8 100%);color:#253449; }
+.site-header { background:linear-gradient(105deg,#fff 0%,#f1f5fa 58%,#fff0f2 100%);border-bottom:3px solid transparent;border-image:linear-gradient(90deg,#168bff,#d92743,#168bff) 1;box-shadow:0 5px 22px #243b5312; }
+.header-tag { background:linear-gradient(100deg,#e7f2ff,#fff0f2);border-color:#c9d8e8;color:#30445c; }
+.hero { background:radial-gradient(ellipse at 12% 38%,#168bff16 0%,transparent 36%),radial-gradient(ellipse at 88% 72%,#e52b4512 0%,transparent 35%),linear-gradient(125deg,#f8fafc 0%,#edf1f5 55%,#fff5f5 100%);border-bottom:1px solid #d5dee8; }
+.hero:before { opacity:.35;background-image:radial-gradient(#42618120 1px,transparent 1px); }
+.stage-glow { background:radial-gradient(circle,#168bff22 0%,#e52b4512 44%,transparent 72%);filter:blur(40px); }
+.brick { border-color:#d0dce8;box-shadow:0 16px 42px #22354a20,0 0 0 1px #168bff12; }
+.section { background:linear-gradient(180deg,#f0f2f5 0%,#e8edf2 100%); }
+.section-head h2 { color:#20344c;text-shadow:none; }
+.section-head p { color:#68798c; }
+#specs .panel:first-child,#calculator { background:linear-gradient(145deg,#fff 0%,#f5f7f9 70%,#fff4f5 100%);border:1px solid #d7e0e9;border-top:3px solid #d92743;box-shadow:0 12px 32px #263d5312,inset 0 1px 0 #fff;color:#27394e; }
+#specs .panel:first-child .spec-item { background:linear-gradient(135deg,#fff 0%,#f0f4f8 100%);border:1px solid #dce4ec;box-shadow:0 3px 10px #27394e08; }
+#specs .panel:first-child .spec-item:nth-child(odd) { border-right:3px solid #168bff; }
+#specs .panel:first-child .spec-item:nth-child(even) { border-right:3px solid #d92743; }
+#specs .panel:first-child h3,#calculator h3 { color:#20344c;text-shadow:none; }
+#specs .panel:first-child h3 i,#calculator h3 i { background:linear-gradient(135deg,#e4f1ff,#ffeaee);color:#c92440;border:1px solid #d6e2ee; }
+#specs .panel:first-child .spec-value { color:#263a50; }
+#specs .panel:first-child .spec-label,#calculator .calc-intro,#calculator .field label,#calculator .disclaimer { color:#68798c; }
+#specs .panel:first-child .price-box { background:linear-gradient(105deg,#e7f2ff 0%,#f5f7fa 55%,#fff0f2 100%);border:1px solid #e3b9c2;border-right:5px solid #168bff;box-shadow:0 5px 18px #263d530b; }
+#specs .panel:first-child .price { color:#c92340;text-shadow:none; }
+#calculator .field input { background:#fff;color:#263a50;border:1px solid #ccd8e4; }
+#calculator .field input:focus { border-color:#168bff;box-shadow:0 0 0 3px #168bff1c; }
+#calculator #calculateButton { background:linear-gradient(105deg,#087bdf 0%,#1769ff 48%,#d92743 100%);border:1px solid #c4d9ef;box-shadow:0 6px 16px #168bff20; }
+#calculator #calculateButton:hover { background:linear-gradient(105deg,#168bff 0%,#245fff 48%,#e3314c 100%);box-shadow:0 8px 20px #168bff25; }
+#calculator .result { background:linear-gradient(110deg,#e3f0ff 0%,#f4f7fa 50%,#ffeaee 100%);border:1px solid #d9b8c0;box-shadow:0 5px 18px #263d530b;color:#263a50; }
+#calculator .result-top,#calculator .result-note { color:#586c82; }
+#calculator .result-number { color:#c92340; }
+.catalog-ribbon { background:linear-gradient(105deg,#e6f2ff 0%,#f4f6f8 52%,#ffedf0 100%);border-color:#d4dfe9;box-shadow:0 5px 18px #263d530b;color:#30445c; }
+.catalog-ribbon strong,.spec-badge { color:#c92340; }
+.spec-badge { background:linear-gradient(100deg,#e1efff,#ffeaee);border:1px solid #d3dfeb; }
+.footer { background:linear-gradient(115deg,#152d49 0%,#214b70 54%,#792638 100%);border-top:4px solid transparent;border-image:linear-gradient(90deg,#168bff,#e3314c,#168bff) 1; }
+.footer:after { border-color:#76baff;box-shadow:0 0 24px #e3314c30; }
+.contact-link,.footer-phones a,.footer-location,.social-link { border-color:#6887a7;background:linear-gradient(105deg,#ffffff10,#ffeff012); }
+.contact-icon,.footer-phones .phone-icon,.footer-location svg { color:#ff8395; }
+.footer-contact a:hover,.footer-phones a:hover,.footer-location:hover,.social-link:hover { border-color:#ff8395;background:linear-gradient(105deg,#168bff30,#ff244b25);box-shadow:0 0 14px #168bff18; }
+.footer-bottom { border-top-color:#6b87a3; }
+@media (max-width:760px) { .app-root { background:linear-gradient(180deg,#f3f5f8,#e8edf2); }.hero { background:radial-gradient(ellipse at 15% 30%,#168bff18,transparent 40%),radial-gradient(ellipse at 90% 75%,#e52b4512,transparent 40%),linear-gradient(130deg,#f8fafc,#edf1f5 65%,#fff5f5); }.section { background:linear-gradient(160deg,#f0f2f5,#e8edf2 65%,#f5f6f8); } }
+/* Signature header: rich blue with bold red details and polished motion */
+.site-header { position:relative;isolation:isolate;background:linear-gradient(112deg,#07366b 0%,#1269b0 52%,#08427b 100%);border-bottom:4px solid #d71936;box-shadow:0 8px 26px #0b376b30; }
+.site-header:before { content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(105deg,transparent 0%,#ffffff0a 38%,#ffffff22 50%,#ffffff08 62%,transparent 100%);background-size:220% 100%;animation:header-sheen 7s ease-in-out infinite; }
+.site-header:after { content:"";position:absolute;bottom:-4px;right:0;width:34%;height:4px;background:linear-gradient(90deg,#ff5268,#b80e2a);box-shadow:0 0 14px #e7193b80;transform-origin:right;animation:header-line 3.8s ease-in-out infinite alternate; }
+.brand { color:#fff;text-shadow:0 2px 12px #001d3e70; }
+.brand > div:last-child span { color:#ff536a!important;text-shadow:0 0 14px #ff244b55; }
+.brand-mark { border:0;background:transparent;box-shadow:none;transition:none; }
+.brand-mark:hover { transform:none;box-shadow:none;border:0;background:transparent; }
+.header-tag { color:#fff;background:linear-gradient(110deg,#ffffff18,#ffffff08);border:1px solid #b7d9ff85;box-shadow:inset 0 1px #ffffff18,0 4px 14px #001b3b20;backdrop-filter:blur(8px);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease; }
+.header-tag:hover { transform:translateY(-2px);border-color:#ff536a;box-shadow:0 5px 18px #ff244b20; }
+@keyframes header-sheen { 0%,100% { background-position:120% 0;opacity:.45; } 50% { background-position:-120% 0;opacity:1; } }
+@keyframes header-line { from { width:24%; } to { width:62%; } }
+@media (prefers-reduced-motion:reduce) { .site-header:before,.site-header:after { animation:none; } .brand-mark,.header-tag { transition:none; } }
+@media (max-width:760px) { .site-header { background:linear-gradient(120deg,#07366b,#1269b0 60%,#08427b); } .site-header:after { width:42%; } .brand { gap:9px; } }
+/* Keep both company logos free of frames, backgrounds, and shadows */
+.footer-logo-art { background:transparent!important;padding:0!important;border:0!important;border-radius:0!important;box-shadow:none!important;filter:none!important;object-fit:contain; }
+.footer-brand-mark { background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important; }
+.brand-mark,.brand-mark img { background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;filter:none!important; }
 </style>
 </head>
 <body>
 <div class="app-root" data-sites-preview-theme>
   <header class="site-header">
-    <div class="brand"><div class="brand-mark" role="img" aria-label="لوگوی یزدگنبد با الهام از بادگیر و گنبد"><svg viewBox="0 0 48 48" aria-hidden="true"><defs><linearGradient id="headerLogo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0d9"/><stop offset="1" stop-color="#e9a06d"/></linearGradient></defs><path d="M24 3 44 14.5v19L24 45 4 33.5v-19Z" fill="none" stroke="url(#headerLogo)" stroke-width="1.5"/><path d="M12 31V19l5-3v15M17 19h5v12M26 31V19l5-3v15M31 19h5v12" fill="none" stroke="#fff0d9" stroke-width="2" stroke-linejoin="round"/><path d="M15 16V10h5v4M28 14V8h5v8" fill="none" stroke="#f3bd91" stroke-width="2" stroke-linejoin="round"/><path d="M10 34h28M13 37h22" stroke="#f3bd91" stroke-width="1.5" stroke-linecap="round"/><path d="M20 31c0-4 2-6 4-8 2 2 4 4 4 8" fill="#d87842" stroke="#fff0d9" stroke-width="1.3"/></svg></div><div>یزدگنبد <span style="color:#dc885e">| آجر نسوز</span></div></div>
+    <div class="brand"><div class="brand-mark" role="img" aria-label="لوگوی یزدگنبد"><img src="https://cdn.imgurl.ir/uploads/c86058_.png" alt="لوگوی یزدگنبد"></div><div>یزدگنبد <span style="color:#f05a70">| آجر نسوز</span></div></div>
     <div class="header-tag">کیفیت ماندگار در ساخت‌وساز</div>
   </header>
   <main>
     <section class="hero">
       <div class="product-stage" aria-label="عکس آجر پلاک نسوز">
         <div class="stage-glow"></div>
-        <div class="brick-wrap"><div class="brick"><img src="https://cdn.imgurl.ir/uploads/k55836_.jpg" alt="تصویر آجر پلاک نسوز قرمز یزدگنبد" style="display:block;width:100%;max-height:320px;object-fit:cover;border-radius:14px;" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=90'"></div></div>
+        <div class="brick-wrap"><div class="brick"><img src="https://cdn.imgurl.ir/uploads/i490190_.jpg" alt="تصویر آجر پلاک نسوز قرمز یزدگنبد" style="display:block;width:100%;max-height:320px;object-fit:cover;border-radius:14px;" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=90'"></div></div>
       </div>
     </section>
     <section class="section" id="specs">
@@ -176,10 +423,10 @@ h1 span { color:#dc885e; }
           <div class="spec-grid">
             <div class="spec-item"><span class="spec-label">نام محصول</span><span class="spec-value" id="specName">آجر پلاک نسوز</span></div>
             <div class="spec-item"><span class="spec-label">رنگ</span><span class="spec-value" id="specColor">انگلیسی نسوز</span></div>
-            <div class="spec-item"><span class="spec-label">وزن هر عدد</span><span class="spec-value" id="specWeight">26 کیلوگرم</span></div>
-            <div class="spec-item"><span class="spec-label">تعداد در هر کارتن</span><span class="spec-value" id="specCarton">15 عدد</span></div>
+            <div class="spec-item"><span class="spec-label">وزن هر عدد</span><span class="spec-value" id="specWeight">350گرم</span></div>
+            <div class="spec-item"><span class="spec-label">تعداد در هر کارتن</span><span class="spec-value" id="specCarton">32عدد</span></div>
             <div class="spec-item"><span class="spec-label">ابعاد سطح قابل‌دید (طول × عرض)</span><span class="spec-value" id="dimSummary">۳۱ × ۷ سانتی‌متر</span></div>
-            <div class="spec-item"><span class="spec-label">برند</span><span class="spec-value" id="specCompany">یزدگنبد</span></div>
+            <div class="spec-item"><span class="spec-label">برند</span><span class="spec-value" id="specCompany">کویر یزد</span></div>
           </div>
           <div class="price-box"><div><small>قیمت محصول</small><div class="empty-price" id="priceText">جهت استعلام قیمت تماس بگیرید.</div></div><div class="price"><span id="specPrice">—</span> <span style="font-size:12px;font-weight:500">تومان</span></div></div>
         </article>
@@ -204,7 +451,7 @@ h1 span { color:#dc885e; }
     </section>
   </main>
   <footer class="footer">
-    <div class="footer-brand"><svg class="footer-logo-art" viewBox="0 0 64 64" role="img" aria-label="لوگوی هندسی یزدگنبد"><defs><linearGradient id="brickGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e6a071"/><stop offset="1" stop-color="#8e3d22"/></linearGradient></defs><path d="M32 3 59 19v26L32 61 5 45V19Z" fill="none" stroke="url(#brickGold)" stroke-width="3"/><path d="M32 10 51 21v22L32 54 13 43V21Z" fill="#a94f2a" stroke="#f1c09e" stroke-width="1.5"/><path d="M13 21 32 32 51 21M32 32v22M13 43l19-11 19 11" fill="none" stroke="#fff0df" stroke-width="2"/><path d="M22 17h20v8H22zM22 39h20v8H22z" fill="#d87842" stroke="#ffe0c5" stroke-width="1"/></svg><div class="footer-brand-copy"><strong>شرکت یزد گنبد</strong><small>تولیدکننده آجرهای نسوز</small><small>کیفیت ماندگار، اصالت در ساخت</small></div></div>
+    <div class="footer-brand"><img class="footer-logo-art" src="https://cdn.imgurl.ir/uploads/c86058_.png" alt="لوگوی یزدگنبد"><div class="footer-brand-copy"><strong>شرکت یزد گنبد</strong><small>تولیدکننده آجرهای نسوز</small><small>کیفیت ماندگار، اصالت در ساخت</small></div></div>
     <div class="footer-contact"><div class="footer-contact-title">تماس با ما</div><div class="footer-phones"><a href="tel:09131515674"><span class="phone-icon">☎</span>09131515674</a><a href="tel:03536229213"><span class="phone-icon">☎</span>035-3622-9213</a><a href="tel:09121194040"><span class="phone-icon">☎</span>09121194040</a></div></div>
     <div class="footer-social"><div class="footer-social-title">شبکه‌های اجتماعی</div><div class="social-links"><a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="اینستاگرام"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>اینستاگرام</a><a class="social-link" href="https://t.me/" target="_blank" rel="noopener noreferrer" aria-label="تلگرام"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 3.7 18.3 20c-.2 1.1-.9 1.3-1.8.8l-5-3.7-2.4 2.3c-.3.3-.6.6-1.2.6l.4-5.1 9.3-8.4c.4-.4-.1-.6-.6-.2L5.5 13.5.6 12c-1.1-.3-1.1-1 .2-1.5L20 3c.9-.3 1.7.2 1.5.7Z"/></svg>تلگرام</a><a class="social-link" href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" aria-label="واتساپ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.8a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.4-4.8a8.4 8.4 0 1 1 16.1-3.9Z"/><path d="M8.5 8.2c.3-.6.7-.6 1-.1l1 1.8c.2.3.1.6-.2.9l-.6.6c.7 1.3 1.7 2.3 3 2.9l.6-.7c.2-.3.5-.4.8-.2l1.8.9c.4.2.5.6.2 1-.4.7-1.2 1.1-2 1-3.4-.6-6.6-3.7-7-6.5-.1-.6.5-1.3 1.4-1.6Z"/></svg>واتساپ</a></div><div class="footer-thanks">ممنون از انتخاب شما <span>اعتماد شما، سرمایهٔ ماست.</span><a class="footer-location" href="https://www.google.com/maps/search/?api=1&query=یزد+گنبد" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>موقعیت مکانی شرکت</a></div></div>
     <div class="footer-bottom">© شرکت یزد گنبد · همراه شما در ساختن فضاهایی ماندگار</div>
